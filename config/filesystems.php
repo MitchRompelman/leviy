@@ -58,7 +58,7 @@ return [
             'driver' => 'local',
             'root' => storage_path('/csv'),
             'url' => env('APP_URL').'storage/csv',
-            'visibility' => 'public',
+            'visibility' => 'private',
         ],
         's3' => [
             'driver' => 's3',
