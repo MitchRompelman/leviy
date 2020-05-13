@@ -1,9 +1,12 @@
 BASIC SETUP
 
-1. Install composer
-2. sudo apt install git
-3. sudo apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
-4. sudo composer create-project --prefer-dist laravel/laravel leviy
+1. sudo add-apt-repository ppa:ondrej/php
+2. sudo apt update
+3. sudo apt install php7.3 php7.3-common php7.3-cli php7.3-fpm
+4. Install composer
+5. sudo apt install git
+6. sudo apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
+7. sudo composer create-project --prefer-dist laravel/laravel leviy
 
 VIRTUAL HOST
 
