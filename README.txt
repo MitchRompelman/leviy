@@ -5,7 +5,7 @@ BASIC SETUP
 3. sudo apt install php7.3 php7.3-common php7.3-cli php7.3-fpm
 4. Install composer
 5. sudo apt install git
-6. sudo apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
+6. sudo apt install openssl php7.3-common php7.3-curl php7.3-json php7.3-mbstring php7.3-mysql php7.3-xml php7.3-zip
 7. sudo composer create-project --prefer-dist laravel/laravel leviy
 
 VIRTUAL HOST
