@@ -25,3 +25,8 @@ VIRTUAL HOST
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+SETUP LOCAL
+
+1. composer install
+2. php artisan key:generate
+3. pap artisan migrate
