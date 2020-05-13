@@ -7,7 +7,8 @@ BASIC SETUP
 5. Install composer
 6. sudo apt install git
 7. sudo composer create-project laravel/laravel leviy 5.8.*
-8. sudo chmod -R 777 storage/
+8. sudo a2enmod rewrite
+9. systemctl restart apache2
 
 VIRTUAL HOST
 
@@ -16,17 +17,37 @@ VIRTUAL HOST
 3. Add content to leviy.localhost.conf:
 
 <VirtualHost *:80>
+
+        <Directory /var/www/leviy/public>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Require all granted
+        </Directory>
+
         ServerAdmin webmaster@localhost
         DocumentRoot /var/www/leviy/public
         ServerName leviy.localhost
         ServerAlias www.leviy.localhost
-        
+
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+4. sudo a2ensite leviy.localhost.conf
+5. sudo systemctl restart apache2
+
 SETUP LOCAL
 
 1. composer install
-2. php artisan key:generate
-3. pap artisan migrate
+2. Setup the .env file
+3. php artisan key:generate
+4. php artisan migrate
+
+SETUP USER
+
+1. php artisan tinker
+2. $user = new User();
+3. $user->name = 'leviy';
+4. $user->email = 'leviy@leviy.nl';
+5. $user->password = Hash::make('leviy');
+6. $user->save();
