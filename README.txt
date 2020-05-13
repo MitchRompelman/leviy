@@ -51,3 +51,7 @@ SETUP USER
 4. $user->email = 'leviy@leviy.nl';
 5. $user->password = Hash::make('leviy');
 6. $user->save();
+
+COMMAND GENERATE CSV
+1. php artisan SchemeCommand
+2. login and download generated csv

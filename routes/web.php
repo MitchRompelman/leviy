@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/download', 'CsvController@download')->name('csvDownload');
+Route::get('/download_generated_csv','CsvController@downloadGeneratedCsv')->name('csvDownloadGenerated');

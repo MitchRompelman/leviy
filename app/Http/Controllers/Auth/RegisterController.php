@@ -37,6 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        die('Oops this option is disabled!');
         $this->middleware('guest');
     }
 
