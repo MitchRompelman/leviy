@@ -7,6 +7,7 @@ BASIC SETUP
 5. Install composer
 6. sudo apt install git
 7. sudo composer create-project laravel/laravel leviy 5.8.*
+8. sudo chmod -R 777 storage/
 
 VIRTUAL HOST
 
