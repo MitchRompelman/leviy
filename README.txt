@@ -4,7 +4,7 @@ BASIC SETUP
 2. sudo apt update
 3. sudo apt install php7.3 php7.3-cli php7.3-fpm
 4. sudo apt install openssl php7.3-common php7.3-curl php7.3-json php7.3-mbstring php7.3-mysql php7.3-xml php7.3-zip
-5. Install composer
+5. install composer
 6. sudo apt install git
 7. sudo composer create-project laravel/laravel leviy 5.8.*
 8. sudo a2enmod rewrite
@@ -13,7 +13,7 @@ BASIC SETUP
 VIRTUAL HOST
 
 1. //etc/apache2/sites-available
-2. create file leviy.localhost.conf
+2. Create file leviy.localhost.conf
 3. Add content to leviy.localhost.conf:
 
 <VirtualHost *:80>
@@ -53,5 +53,10 @@ SETUP USER
 6. $user->save();
 
 COMMAND GENERATE CSV
+
 1. php artisan SchemeCommand
 2. login and download generated csv
+
+CSV
+
+1. Delimiter is ","
